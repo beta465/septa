@@ -1,0 +1,106 @@
+body{
+    background-color: bisque;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    color: darkgrey;
+    font-style: italic;
+    font-size: 30px;
+    display: inline-block;
+    left: 30px;
+    position: relative;
+    margin: 0;
+}
+/*-- Navigation bar--*/
+nav a {
+    text-decoration: none;
+    color: black;
+    left: 20vw;
+    position: relative;
+    font-size: 20px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+header a:hover{
+    border-bottom: 3px solid red;
+}
+
+@media (max-width:360px){
+    nav a{
+        left: 5px;
+        font-size: 16px;
+        margin-left: 5px;
+    }
+}
+
+@media (max-width:768px){
+    nav a{
+        left: 20px;
+        font-size: 16px;
+        margin-left: 5px;
+    }
+}
+/*--welcome massage--*/
+    
+main{
+    flex:1 0 auto;
+}
+
+.septa-middle-text{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.septa-middle-text h2{
+    font-size: 70px;
+    color:floralwhite;
+    display: inline;
+}
+
+.septa-middle-text p{
+    font-size: 30px;
+    color:floralwhite;
+    display: inline-block;
+    margin-bottom: 200px;
+}
+
+/*--footer--*/
+footer{
+    background-color: #eee;
+    color:black;
+    text-align: center;
+    bottom: 0;
+    display: block;
+    position: relative;
+}
+
+footer p{
+    margin-bottom: 30px;
+}
+.social a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	margin: 3px 1px;
+	font-size: 14px;
+	background: #d5d5d5;
+	color: #fff;
+	border-radius: 50%;
+    margin: 30px;
+	-webkit-transition: background 1s linear;
+	-moz-transition: background 1s linear;
+	-ms-transition: background 1s linear;
+	-o-transition: background 1s linear;
+	transition: background 1s linear;
+}
+
+.social a:hover {
+    background: pink;
+}

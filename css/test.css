@@ -1,0 +1,163 @@
+body{
+    background-color: bisque;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    color: darkgrey;
+    font-style: italic;
+    font-size: 30px;
+    display: inline-block;
+    left: 30px;
+    position: relative;
+    margin: 0;
+}
+
+.dd-btn{
+    display: none;
+}
+
+.close{
+    display: none;
+}
+@media (max-width:480px){
+    
+    .dd-btn{
+        display: block;
+    }
+    .lightbox{
+    position: fixed;
+    width:100%;
+    height: 100%;
+    visibility: hidden;
+    display: table;
+    background: rbga(0,0,0,0.7);
+    top:0;
+    left: 0;
+    z-index: 3;
+}
+
+.lightbox:target{
+    visibility: visible;
+}
+
+.lightbox-content{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+  
+    .close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        font-weight: 300;
+        text-decoration: none;
+        color: azure;
+        display: block;
+    }
+}
+
+main{
+    flex:1 0 auto;
+    background: white;
+}
+
+main h1{
+    position: relative;
+    left:20vw;
+    margin: 30px;
+}
+
+main h2{
+    text-align: center;
+}
+
+main h3{
+    font-size: 30px;
+}
+
+p{
+   font-size: 16px; 
+}
+
+main input[type="radio"]{
+    display: none;
+}
+
+.container{
+    border: 3px solid black;
+    margin: 20px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    background-color: bisque;
+    color: white;
+    z-index: 2;
+}
+
+.accordion:last-child > label, .accordion:last-child > accodion-content{
+    border: none;
+}
+
+.accodion-content{
+    border-bottom: 1px solid black;
+    padding: 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    z-index: -1;
+    transition: : 1s linear;
+}
+
+input:checked ~.accodion-content {
+    padding: 15px;
+    opacity: 1;
+    max-height: 500px;
+    z-index: 1;
+}
+
+footer{
+    background-color: #eee;
+    color:black;
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-top: 40px;
+}
+
+footer p{
+    margin-bottom: 30px;
+}
+
+.social a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	margin: 3px 1px;
+	font-size: 14px;
+	background: #d5d5d5;
+	color: #fff;
+	border-radius: 50%;
+    margin: 30px;
+	-webkit-transition: background 1s linear;
+	-moz-transition: background 1s linear;
+	-ms-transition: background 1s linear;
+	-o-transition: background 1s linear;
+	transition: background 1s linear;
+}
+
+.social a:hover {
+    background: bisque;
+}
